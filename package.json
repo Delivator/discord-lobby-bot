@@ -1,0 +1,24 @@
+{
+  "name": "discord-lobby-bot",
+  "version": "1.0.0",
+  "description": "Plays your favourite song 24/7 in your favourite channel!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Delivator/discord-lobby-bot.git"
+  },
+  "author": "Delivator",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Delivator/discord-lobby-bot/issues"
+  },
+  "homepage": "https://github.com/Delivator/discord-lobby-bot#readme",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "opusscript": "0.0.6"
+  }
+}
