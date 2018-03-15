@@ -20,7 +20,7 @@ function playSong(voiceChannel) {
         if (voiceChannel.guild.loopSong) playSong(voiceChannel.guild.voiceConnection.channel);
       });
     })
-    .catch(console.error)
+    .catch(console.error);
 }
 
 client.on("ready", () => {
