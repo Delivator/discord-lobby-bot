@@ -17,7 +17,7 @@ function playSong(voiceChannel) {
       });
 
       dispatcher.on("end", () => {
-        if (voiceChannel.guild.loopSong) playSong(voiceChannel);
+        if (voiceChannel.guild.loopSong) playSong(voiceChannel.guild.voiceConnection.channel);
       });
     })
     .catch(console.error)

@@ -1,6 +1,6 @@
 {
   "name": "discord-lobby-bot",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Plays your favourite song 24/7 in your favourite channel!",
   "main": "index.js",
   "scripts": {
