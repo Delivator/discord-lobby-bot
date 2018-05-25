@@ -12,7 +12,7 @@ function playSong(voiceChannel) {
 
       let dispatcher = connection.playFile(settings.song);
 
-      dispatcher.on("error", e => {
+      dispatcher.on("error", (e) => {
         console.error(e);
       });
 
@@ -20,7 +20,7 @@ function playSong(voiceChannel) {
         if (voiceChannel.guild.loopSong) playSong(voiceChannel.guild.voiceConnection.channel);
       });
     })
-    .catch(console.error);
+      .catch(console.error);
 }
 
 client.on("ready", () => {
@@ -28,7 +28,7 @@ client.on("ready", () => {
   client.user.setActivity(settings.songTitle);
 });
 
-client.on("error", e => {
+client.on("error", (e) => {
   console.error(e);
 });
 
@@ -48,8 +48,10 @@ client.on("message", message => {
 
   switch (cmd) {
     case "join":
+      // Check for permissions
       if (!member.permissions.has("MOVE_MEMBERS")) return message.reply("Insufficient permission (You need the permission to move members)!");
       if (!member.voiceChannel) return message.reply("You have to be in a voice channel to use this command!");
+
       if (guild.voiceConnection) if (member.voiceChannel === guild.voiceConnection.channel) return;
       if (guild.voiceConnection) {
         guild.loopSong = false;
@@ -62,6 +64,7 @@ client.on("message", message => {
       }
       break;
     case "leave":
+      // Check for permissions
       if (!member.permissions.has("MOVE_MEMBERS")) return message.reply("Insufficient permission (You need the permission to move members)!");
       guild.loopSong = false;
       if (guild.voiceConnection) guild.voiceConnection.disconnect();
@@ -90,6 +93,6 @@ client.on("voiceStateUpdate", () => {
 });
 
 client.login(settings.token)
-  .catch(e => {
+  .catch((e) => {
     console.error(e);
   });
