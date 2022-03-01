@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Delivator/discord-lobby-bot.git"
+    "url": "git+https://github.com/itz-mst-boy/discord-lobby-bot.git"
   },
   "author": "Delivator",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Delivator/discord-lobby-bot/issues"
+    "url": "https://github.com/itz-mst-boy/discord-lobby-bot/issues"
   },
-  "homepage": "https://github.com/Delivator/discord-lobby-bot#readme",
+  "homepage": "https://github.com/itz-mst-boy/discord-lobby-bot#readme",
   "dependencies": {
     "discord.js": "^11.3.2",
     "opusscript": "0.0.6"
